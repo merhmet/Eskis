@@ -18,11 +18,11 @@
     flex-basis: 80%;
 }
 .slider{
-    height: 50vh;
+    height: 80vh;
     display: flex;
 }
 .product img{
-    height: 19vh;
+    height: 10vh;
     margin-bottom: 9px;
     cursor: pointer;
     opacity: 0.6;
@@ -34,7 +34,7 @@
 
 
 .preview img{
-    height: 80%;
+    height: 100%;
 }
 p{
     margin-bottom: 10px;
@@ -54,7 +54,7 @@ h2{
 }
 .rating{
     display: flex;
-    height: 15px;
+    height: 10px;
 }
 .rating .fa{
     color: #008000;
@@ -66,7 +66,7 @@ h2{
     padding-top: 10px;
 }
 input{
-    width: 30px;
+    width: 10px;
     border: 1px solid #ccc;
     font-weight: bold;
     text-align: center;
