@@ -2,7 +2,33 @@
 <body style="background-color:#4C0013;">
 
 
-<head>
+
+
+
+
+
+
+<style>
+/* (A) IMAGE WATERMARK */
+.watermark img { width: 1%; }
+.watermark { position: relative; }
+.watermark::after {
+  content: "Ahu hotel'e gelir";
+  position: absolute;
+  bottom: -680;
+  right: 990;
+  opacity: 0.5;
+  font-size: 1.5em;
+  color: red;
+}
+</style>
+ 
+<!-- (B) WATERMARKED IMG -->
+<div class="watermark">
+  <img src="dog.jpg"/>
+</div>
+
+
 
     <title>Ecommerce Product Website - Easy Tutorials</title>
     <link href="style.css" rel="stylesheet">
