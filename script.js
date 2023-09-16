@@ -1,76 +1,70 @@
-class Post {
-  constructor(title, link, author, img) {
-    this.title = title;
-    this.link = link;
-    this.author = author;
-    this.img = img;
-  }}
+/* Please ❤ this if you like it! */
 
 
-const app = new Vue({
-  el: '#app',
-  data: {
-    search: '',
-    postList: [
-    new Post(
-    'Turis',
-    'https://my.combell.com/en/product/webhosting/linux/eskisehirmasaj.eu/file-manager',
-    'Turis',
-    'https://od.lk/s/OTFfMjc3OTI5OTdf/TRT_MUZIK%20%281%29.jpg'),
+(function($) { "use strict";
+		
+	//Page cursors
 
-    new Post(
-    'React.js',
-    'https://www.google.be/',
-    'Mulayim',
-    'https://od.lk/s/OTFfMjc3OTI5OTBf/powerturktv.jpg'),
+    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+        t.style.left = n.clientX + "px", 
+		t.style.top = n.clientY + "px", 
+		e.style.left = n.clientX + "px", 
+		e.style.top = n.clientY + "px", 
+		i.style.left = n.clientX + "px", 
+		i.style.top = n.clientY + "px"
+    });
+    var t = document.getElementById("cursor"),
+        e = document.getElementById("cursor2"),
+        i = document.getElementById("cursor3");
+    function n(t) {
+        e.classList.add("hover"), i.classList.add("hover")
+    }
+    function s(t) {
+        e.classList.remove("hover"), i.classList.remove("hover")
+    }
+    s();
+    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+        o(r[a])
+    }
+    function o(t) {
+        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+    }
+	
+	//Navigation
 
-    new Post(
-    'Tatlises Tv',
-    'https://www.google.be/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5OTZf/tatlises-tv.png'),
+	var app = function () {
+		var body = undefined;
+		var menu = undefined;
+		var menuItems = undefined;
+		var init = function init() {
+			body = document.querySelector('body');
+			menu = document.querySelector('.menu-icon');
+			menuItems = document.querySelectorAll('.nav__list-item');
+			applyListeners();
+		};
+		var applyListeners = function applyListeners() {
+			menu.addEventListener('click', function () {
+				return toggleClass(body, 'nav-active');
+			});
+		};
+		var toggleClass = function toggleClass(element, stringClass) {
+			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+		};
+		init();
+	}();
 
-    new Post(
-    'Power Türk',
-    'https://www.google.be/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5OTNf/pwr%20turk%20en%20yenileri.jpg'),
-
-    new Post(
-    'One Dance',
-    'https://www.ozbeceriksizler.co/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5ODRf/number%20one%20Dance.jpg'),
-
-    new Post(
-    'Askim Radyo',
-    'https://www.ozbeceriksizler.co/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5ODhf/power%20plus.jpg'),
-
-    new Post(
-    'Kral',
-    'https://www.google.be/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5OTVf/slow%20karadeniz.png'),
-
-    new Post(
-    'Number Damar',
-    'https://www.google.be/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5ODZf/number-one-turk-damar.jpg'),
-
-    new Post(
-    'Askim Radyo',
-    'https://www.google.be/',
-    '',
-    'https://od.lk/s/OTFfMjc3OTI5ODVf/number1%20turk.jpeg')] },
-
-
-
-  computed: {
-    filteredList() {
-      return this.postList.filter(post => {
-        return post.title.toLowerCase().includes(this.search.toLowerCase());
-      });
-    } } });
+	
+	//Switch light/dark
+	
+	$("#switch").on('click', function () {
+		if ($("body").hasClass("light")) {
+			$("body").removeClass("light");
+			$("#switch").removeClass("switched");
+		}
+		else {
+			$("body").addClass("light");
+			$("#switch").addClass("switched");
+		}
+	});          
+              
+})(jQuery);
