@@ -13,58 +13,58 @@ const app = new Vue({
     search: '',
     postList: [
     new Post(
-    'Vue.js',
-    'https://vuejs.org/',
-    'Chris',
-    'https://vuejs.org//images/logo.png'),
+    'Turis',
+    'https://my.combell.com/en/product/webhosting/linux/eskisehirmasaj.eu/file-manager',
+    'Turis',
+    'https://od.lk/s/OTFfMjc3OTI5OTdf/TRT_MUZIK%20%281%29.jpg'),
 
     new Post(
     'React.js',
-    'https://facebook.github.io/react/',
-    'Tim',
-    'https://daynin.github.io/clojurescript-presentation/img/react-logo.png'),
+    'https://www.google.be/',
+    'Mulayim',
+    'https://od.lk/s/OTFfMjc3OTI5OTBf/powerturktv.jpg'),
 
     new Post(
-    'Angular.js',
-    'https://angularjs.org/',
-    'Sam',
-    'https://angularjs.org/img/ng-logo.png'),
+    'Tatlises Tv',
+    'https://www.google.be/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5OTZf/tatlises-tv.png'),
 
     new Post(
-    'Ember.js',
-    'http://emberjs.com/',
-    'Rachel',
-    'http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200'),
+    'Power Türk',
+    'https://www.google.be/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5OTNf/pwr%20turk%20en%20yenileri.jpg'),
 
     new Post(
-    'Meteor.js',
-    'https://www.meteor.com/',
-    'Chris',
-    'http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/img/meteor.png'),
+    'One Dance',
+    'https://www.ozbeceriksizler.co/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5ODRf/number%20one%20Dance.jpg'),
 
     new Post(
-    'Aurelia',
-    'http://aurelia.io/',
-    'Tim',
-    'https://cdn.auth0.com/blog/aurelia-logo.png'),
+    'Askim Radyo',
+    'https://www.ozbeceriksizler.co/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5ODhf/power%20plus.jpg'),
 
     new Post(
-    'Node.js',
-    'https://nodejs.org/en/',
-    'A. A. Ron',
-    'https://code-maven.com/img/node.png'),
+    'Kral',
+    'https://www.google.be/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5OTVf/slow%20karadeniz.png'),
 
     new Post(
-    'Pusher',
-    'https://pusher.com/',
-    'Alex',
-    'https://avatars1.githubusercontent.com/u/739550?v=3&s=400'),
+    'Number Damar',
+    'https://www.google.be/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5ODZf/number-one-turk-damar.jpg'),
 
     new Post(
-    'Feathers.js',
-    'http://feathersjs.com/',
-    'Chuck',
-    'https://cdn.worldvectorlogo.com/logos/feathersjs.svg')] },
+    'Askim Radyo',
+    'https://www.google.be/',
+    '',
+    'https://od.lk/s/OTFfMjc3OTI5ODVf/number1%20turk.jpeg')] },
 
 
 

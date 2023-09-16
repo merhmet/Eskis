@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Vue search filter</title>
+  <title>Turis_Tv</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -10,14 +10,14 @@
 <!-- partial:index.partial.html -->
 <div id="app">
   <div class="search-wrapper">
-    <input type="text" v-model="search" placeholder="Search title.."/>
-        <label>Search title:</label>
+    <input type="text" v-model="search" placeholder="Arama.."/>
+        <label>Arama Yap:</label>
   </div>
   <div class="wrapper">
     <div class="card" v-for="post in filteredList">
       <a v-bind:href="post.link" target="_blank">
         <img v-bind:src="post.img"/>
-        <small>posted by: {{ post.author }}</small>
+        <small>: {{ post.author }}</small>
         {{ post.title }}
       </a>
     </div>
