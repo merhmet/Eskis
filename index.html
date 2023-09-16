@@ -1,108 +1,30 @@
-<html>
-
-
-
-
-
-
-
-
-
-<style>
-/* (A) IMAGE WATERMARK */
-.watermark img { width: 1%; }
-.watermark { position: relative; }
-.watermark::after {
-  content: "Ahu hotel'e gelir";
-  position: absolute;
-  bottom: -700;
-  right: 800;
-  opacity: 0.5;
-  font-size: 3em;
-  color: red;
-}
-</style>
- 
-<!-- (B) WATERMARKED IMG -->
-<div class="watermark">
-  <img src="dog.jpg"/>
-</div>
-
-
-
-
-    <title>Ecommerce Product Website - Easy Tutorials</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vue search filter</title>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
-
 <body>
-
-    <div class="hero">
-        <div class="row">
-            <div class="col">
-
-                <div class="slider">
-                    <div class="product">
-
-                        <img src="product1.png" alt="" onclick="clickme(this)">
-                        <img src="product2.png" alt="" onclick="clickme(this)">
-                        <img src="product3.png" alt="" onclick="clickme(this)">
-                        <img src="product4.png" alt="" onclick="clickme(this)">
-
-                    </div>
-                    <div class="preview">
-                        <img src="images/product1.png" id="imagebox" alt="">
-                    </div>
-                </div>
-
-            </div>
-            
-
-            
-                    
-
-                </div>
-
-            </div>
-        </div>
-
-
-                        
-		
-			<a href="https://2cisayfa.html">
-
-
-
-                       
-
-                        
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="search-wrapper">
+    <input type="text" v-model="search" placeholder="Search title.."/>
+        <label>Search title:</label>
+  </div>
+  <div class="wrapper">
+    <div class="card" v-for="post in filteredList">
+      <a v-bind:href="post.link" target="_blank">
+        <img v-bind:src="post.img"/>
+        <small>posted by: {{ post.author }}</small>
+        {{ post.title }}
+      </a>
     </div>
-
-
-
-    <script>
-        function clickme(smallImg) {
-
-            var fullImg = document.getElementById("imagebox");
-            fullImg.src = smallImg.src;
-
-        }
-
-    </script>
-
-
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.9/vue.min.js'></script><script  src="./script.js"></script>
 
 </body>
-
 </html>
