@@ -2,64 +2,51 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Drop-down menu</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  <title>CodePen - Accordion menu HTML CSS Only</title>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<header class="cd-header">
-		<div class="header-wrapper">
-			<div class="logo-wrap">
-				<a href="#" class="hover-target"><span>Turis</span>Tv</a>
-			</div>
-			<div class="nav-but-wrap">
-				<div class="menu-icon hover-target">
-					<span class="menu-icon__line menu-icon__line-left"></span>
-					<span class="menu-icon__line"></span>
-					<span class="menu-icon__line menu-icon__line-right"></span>
-				</div>					
-			</div>					
-		</div>				
-	</header>
-
-	<div class="nav">
-		<div class="nav__content">
-			<ul class="nav__list">
-				<li class="nav__list-item active-nav"><a href="#" class="hover-target">Ana Sayfa</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Resimler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Muzikler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Haberler</a></li>
-				<li class="nav__list-item"><a href="#" class="hover-target">Contact</a></li>
-			</ul>
-		</div>
-	</div>		
-
-	<div class="section full-height over-hide">	
-		<div class="switch-wrap">
-			
-				<div id="circle"></div>
-			</div>
-			
-		</div>
-	</div>	
-	
-	<div class='cursor' id="cursor"></div>
-	<div class='cursor2' id="cursor2"></div>
-	<div class='cursor3' id="cursor3"></div>
-
-<!-- Link to page
-================================================== -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
 
 
+<body>
+    <div class="center">
+        <div class="menu">
+            <li class="item" id="profile">
+                <a href="#profile" class="btn"><i class="far fa-user" aria-hidden="true"></i> Profile</a>
+                <div class="smenu">
+                    <a href="">Posts</a>
+                    <a href="">Picture</a>
+                </div>
+            </li>
+            <li class="item" id="message">
+                <a href="#message" class="btn"> <i class="far fa-envelope" aria-hidden="true"></i> Messages</a>
+                <div class="smenu">
+                    <a href="">new</a>
+                    <a href="">sent</a>
+                    <a href="">spam</a>
+                </div>
+            </li>
+            <li class="item" id="Settings">
+                <a href="#Settings" class="btn"><i class="fas fa-cog" aria-hidden="true"></i> Settings</a>
+                <div class="smenu">
+                    <a href="">Password</a>
+                    <a href="">Language</a>
+                </div>
+            </li>
+            <li class="item" id="logout">
+                <a href="" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+            </li>
+        </div>
+    </div>
+
+</body>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
-
+  
 </body>
 </html>
