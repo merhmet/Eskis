@@ -1,120 +1,171 @@
-body{
-  background-color: #000000;
-  color: #ffc266;
-  font-family: 'Roboto', sans-serif;
-}
-#myProgress {
-  width: 300px;
-   background-color: #d9d9f2; 
-  cursor: pointer;
-  border-radius: 10px;
+body {
+  margin: 5px 0;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #4C0013;
+  -webkit-font-smoothing: antialiased;
 }
 
-#myBar {
-  width: 0%;
-  height: 15px;
-  background-color: #79F603;
-  border-radius: 10px;
-}
-
-.logo {
-  fill: red;
-}
-
-.btn-action{
-  cursor: pointer;
-  padding-top: 10px;
-  width: 60px;
-}
-
-.btn-ctn, .infos-ctn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.infos-ctn{
-padding-top: 20px;
-}
-
-.btn-ctn > div {
- padding: 5px;
- margin-top: 18px;
- margin-bottom: 18px;
-}
-
-.infos-ctn > div {
- margin-bottom: 8px;
- color: #ffc266;
-}
-
-.first-btn{
-  margin-left: 3px;
-}
-
-.duration{
-  margin-left: 10px;
-}
-
-.title{
-  margin-left: 10px;
-  width: 210px;
+.title {
+  font-family: "Raleway";
+  font-size: 17px;
+  font-weight: 700;
+  color: #5D4037;
   text-align: center;
 }
 
-.player-ctn{
-  border-radius: 15px;
-  width: 300px;
-  padding: 10px;
-  background-color: #44443F;
-  margin:auto;
-  margin-top: 5px;
+p {
+  line-height: 1.5em;
 }
 
-.playlist-track-ctn{
+h1 + p, p + p {
+  margin-top: 25px;
+}
+
+.container {
+  padding: 1px 2px;
   display: flex;
-  background-color: #8C7C7C;
-  margin-top: 3px;
-  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-wrap {
+  margin: 3px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
   cursor: pointer;
 }
-.playlist-track-ctn:last-child{
-  /*border: 1px solid 524E4E; */
+.card-wrap:hover .card-info {
+  transform: translateY(0);
+}
+.card-wrap:hover .card-info p {
+  opacity: 1;
+}
+.card-wrap:hover .card-info, .card-wrap:hover .card-info p {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card-wrap:hover .card-info:after {
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+  transform: translateY(0);
+}
+.card-wrap:hover .card-bg {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.8;
+}
+.card-wrap:hover .card {
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, white 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
 }
 
-.playlist-track-ctn > div{
-  margin:10px;
+.card {
+  position: relative;
+  flex: 0 0 240px;
+  width: 110px;
+  height: 120px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
-.playlist-info-track{
-  width: 80%;
+
+.card-bg {
+  opacity: 0.5;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
 }
-.playlist-info-track,.playlist-duration{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  color: #e9cc95;
+
+.card-info {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  transform: translateY(30%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info p {
+  opacity: 0;
+  text-shadow: black 0 2px 3px;
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card-info * {
+  position: relative;
+  z-index: 1;
+}
+.card-info:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+  background-blend-mode: overlay;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card-info h1 {
+  font-family: "Playfair Display";
   font-size: 14px;
-  pointer-events: none;
-}
-.playlist-ctn{
-   padding-bottom: 20px;
-}
-.active-track{
-  background: #4d4d4d;
-  color: #ffc266 !important;
-  font-weight: bold;
-  
-}
-
-.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
-  color: #ffc266 !important;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
 
-.playlist-btn-play{
-  pointer-events: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.fas{
-  color: #ffc266;
-  font-size: 15px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
